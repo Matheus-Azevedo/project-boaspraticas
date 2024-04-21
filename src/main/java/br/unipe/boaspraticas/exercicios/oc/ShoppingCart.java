@@ -33,12 +33,5 @@ public class ShoppingCart {
             System.out.println(item.getN() + " - $" + item.getP());
         }
     }
-
-    public void saveToDatabase() {
-        // Lógica para salvar o carrinho de compras no banco de dados
-    }
-
-    public void sendConfirmationEmail() {
-        // Lógica para enviar um e-mail de confirmação do carrinho de compras
-    }
 }
+

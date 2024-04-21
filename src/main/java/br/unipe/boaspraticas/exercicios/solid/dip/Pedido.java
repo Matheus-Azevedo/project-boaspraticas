@@ -5,11 +5,12 @@ package br.unipe.boaspraticas.exercicios.solid.dip;
 // Princípio da Inversão de Dependência, pois a classe de alto nível (Pedido) está dependendo diretamente de uma classe
 // de baixo nível (BancoDeDados). Isso torna o código mais rígido e difícil de modificar,
 // pois qualquer alteração no BancoDeDados pode impactar a classe Pedido.
-class Pedido {
-    private BancoDeDados bancoDeDados;
 
-    public Pedido() {
-        this.bancoDeDados = new BancoDeDados(); // Violando o DIP - dependência direta de uma classe concreta
+class Pedido {
+    private Banco bancoDeDados;
+
+    public Pedido(Banco bancoDeDados) {
+        this.bancoDeDados = bancoDeDados;
     }
 
     public void salvar() {

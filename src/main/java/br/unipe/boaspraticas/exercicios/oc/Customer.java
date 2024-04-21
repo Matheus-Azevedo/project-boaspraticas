@@ -6,34 +6,27 @@ package br.unipe.boaspraticas.exercicios.oc;
 public class Customer {
     private String name;
     private int age;
-    private double totalPurchaseAmount;
 
     public Customer(String name, int age) {
         this.name = name;
         this.age = age;
-        this.totalPurchaseAmount = 0;
     }
-
     // Getters e Setters
 
-    public void addToTotalPurchaseAmount(double amount) {
-        this.totalPurchaseAmount += amount;
+    public String getName() {
+        return name;
     }
 
-    public void makePurchase(double amount) {
-        if (amount > 0) {
-            addToTotalPurchaseAmount(amount);
-            System.out.println("Purchase successful!");
-            if (this.age >= 18) {
-                sendEmailReceipt(amount);
-            }
-        } else {
-            System.out.println("Invalid purchase amount!");
-        }
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void sendEmailReceipt(double amount) {
-        // Lógica para enviar um e-mail com o recibo da compra
-        System.out.println("Email receipt sent. Amount: " + amount);
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
+

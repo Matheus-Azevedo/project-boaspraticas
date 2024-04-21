@@ -1,6 +1,6 @@
 package br.unipe.boaspraticas.exercicios.solid.sip.animais;
 
-class Ave implements Animal {
+public class Ave implements AnimalQueVoa {
     @Override
     public void comer() {
         System.out.println("A ave está comendo.");
@@ -14,11 +14,5 @@ class Ave implements Animal {
     @Override
     public void voar() {
         System.out.println("A ave está voando.");
-    }
-
-    @Override
-    public void nadar() {
-        // Não faz sentido uma ave nadar, mas precisamos implementar o método.
-        System.out.println("A ave está nadando.");
     }
 }

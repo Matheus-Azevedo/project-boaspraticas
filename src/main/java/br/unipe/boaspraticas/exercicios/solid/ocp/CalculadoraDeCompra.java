@@ -7,11 +7,11 @@ import br.unipe.boaspraticas.exercicios.solid.model.ItemCompra;
 public class CalculadoraDeCompra {
     public double calcularTotal(Compra compra) {
         double total = 0;
-        for (ItemCompra item : compra.getI()) {
-            total += item.getPu() * item.getQtd();
+        for (ItemCompra item : compra.getItemList()) {
+            total += item.getPreco() * item.getQuantidade();
         }
-        if (compra.getDesc() > 0) {
-            total -= total * (compra.getDesc() / 100);
+        if (compra.getDesconto() > 0) {
+            total -= total * (compra.getDesconto() / 100);
         }
         return total;
     }
